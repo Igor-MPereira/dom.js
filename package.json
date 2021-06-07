@@ -1,0 +1,11 @@
+{
+  "name": "dom.js",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Igor M. Pereira",
+    "email": "igor@gargantas.org",
+    "url": "https://github.com/Igor-MPereira"
+  },
+  "license": "MIT"
+}
