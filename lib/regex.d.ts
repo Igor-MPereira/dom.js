@@ -1,7 +1,7 @@
 interface RegExp {
   /**
-   * Resets 'lastIndex' Then Runs 'exec' Completely On String Returning An Array Containing Every Matching Index.
+   * Resets 'lastIndex' Then Runs The RegExp Completely On String Returning An Array Containing Every Matching Index.
    * @param string The String object or string literal on which to perform the search.
    */
-  execAllIndexes(string: string): number[];
+  execAll(string: string): number[];
 }
