@@ -1,4 +1,4 @@
-export type LoggerLevel = "info" | "silent" | "error" | "warn";
+export type LoggerLevel = "info" | "silent" | "error" | "warn" | "verbose";
 
 export type LoggerType = "log" | "info" | "warn" | "error";
 
