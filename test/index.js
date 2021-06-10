@@ -1,7 +1,13 @@
 import { Logger, setLevel, InternalLogger } from '../lib/index.js';
 
-console.log(window[Symbol.for(__main_logger_private_access_key)])
-console.log(new Logger().logger_id)
-console.log(setLevel)
-setLevel('info');
-console.log(Logger.prototype)
+const mLogger = window[Symbol.for(__main_logger_private_access_key)];
+
+mLogger.Log(0x1, 0x2, 0x3, 0x4);
+mLogger.Info(0x5, 0x6, 0x7, 0x8);
+mLogger.Warn(0x9, 0xa, 0xb, 0xc);
+mLogger.Error(0xd, 0xe, 0xf, 0x0)
+
+console.info(mLogger.__INTERNAL_LOGGER({
+  data: [0x10, 0x11, 0x12, 0x13],
+  type: 'error'
+}))
