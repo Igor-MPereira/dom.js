@@ -1,8 +1,8 @@
+import { ArgsArray } from '.';
+
 export type LoggerLevel = "info" | "silent" | "error" | "warn" | "verbose";
 
 export type LoggerType = "log" | "info" | "warn" | "error";
-
-export type ArgsArray = any[];
 
 /**
  * Creates A Logger Object, The Log Methods Will Only Trigger If The 
