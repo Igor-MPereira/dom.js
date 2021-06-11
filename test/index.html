@@ -8,5 +8,22 @@
   <title>Document</title>
 </head>
 <body>
+  <script type="module">
+    import { GetStyleString } from './index.js';
+
+    console.log(
+      GetStyleString({
+        ['.just-got-rekt']: {
+          display: 'none',
+          backgroundColor: 'red',
+          padding: 10,
+          border: {
+            topRadius: 10,
+            leftColor: 'green'
+          }
+        }
+      })
+    );
+  </script>
 </body>
 </html>
