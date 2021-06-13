@@ -37,7 +37,8 @@ export default class Logger {
 export type __INTERNAL_LOGGER_INPUT = {
   data: ArgsArray,
   type: LoggerType,
-  forceLog: boolean;
+  forceLog?: boolean;
+  overrideLevel?: number
 };
 
 /**
