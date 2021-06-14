@@ -26,7 +26,10 @@
             backgroundColor: 'green',
             ['&.wow']: {
               color: 'blue',
-              ['&.y']: 'display: flex;'
+              ['&.yes']: 'display: flex;',
+              ['@media (max-width: 480px)']: {
+                width: '100%'
+              }
             }
           },
           ['@media (min-width: 480px)']: {
