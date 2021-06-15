@@ -1,4 +1,4 @@
-export type StyleRule  = CSSStyleDeclaration | { [key: `&${string}` | `@${string}`]: StyleRule };
+export type StyleRule  = CSSStyleDeclaration | { [key: string]: StyleRule };
 export type StyleRules = { [ruleKey: string]: StyleRule; };
 export type HandledStyleRuleResult = {
   styleRuleString: string,

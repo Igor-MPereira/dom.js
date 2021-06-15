@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +8,50 @@
   <script type="module" src="./index.js" defer></script>
   <title>Document</title>
 </head>
+
 <body>
   <script type="module">
-    import { GetStyleString } from './index.js';
-
-    console.log(
-      GetStyleString({
-        ['.just-got-rekt']: {
-          display: 'none',
-          backgroundColor: 'red',
-          padding: 10,
-          border: {
-            topRadius: 10,
-            leftColor: 'green'
-          },
-          position: 'absolute',
-          ['&:hover']: {
-            backgroundColor: 'green',
-            ['&.wow']: {
-              color: 'blue',
-              ['&.yes']: 'display: flex;',
-              ['@media (max-width: 480px)']: {
-                width: '100%'
-              }
+    import { GetStyleString, FormatCSSString } from './index.js';
+    let styleString = GetStyleString({
+      ['.just-got-rekt']: {
+        display: 'none',
+        backgroundColor: 'red',
+        padding: 10,
+        border: {
+          topRadius: 10,
+          leftColor: 'green'
+        },
+        position: 'absolute',
+        ['&:hover']: {
+          backgroundColor: 'green',
+          ['&.wow']: {
+            color: 'blue',
+            ['&.yes']: 'display: flex;',
+            ['@media (max-width: 480px)']: {
+              width: '100%'
             }
-          },
-          ['@media (min-width: 480px)']: {
-            fontSize: 10
           }
+        },
+        ['@media (min-width: 480px)']: {
+          fontSize: 10
         }
-      }, {
-        ['.very-nice']: {
-          backgroundColor: 'blue'
-        }
-      })
-    );
+      }
+    }, {
+      ['.very-nice']: {
+        backgroundColor: 'blue'
+      }
+    })
+
+    console.log(styleString)
+    console.log('\n\n\n')
+
+    const formattedStr = FormatCSSString(styleString);
+    console.log(formattedStr);
+
+    const doubleFormattedStr = FormatCSSString(formattedStr);
+    console.log('\n\n\n')
+    console.log(doubleFormattedStr);
   </script>
 </body>
+
 </html>
