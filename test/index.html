@@ -12,6 +12,8 @@
 <body>
   <script type="module">
     import { GetStyleString, FormatCSSString } from './index.js';
+    window.GetStyleString = GetStyleString;
+    window.FormatCSSString = FormatCSSString;
     let styleString = GetStyleString({
       ['.just-got-rekt']: {
         display: 'none',
@@ -45,7 +47,7 @@
     console.log(styleString)
     console.log('\n\n\n')
 
-    const formattedStr = FormatCSSString(styleString);
+    const formattedStr = FormatCSSString(styleString, { spacing: false, tabSize: 6} );
     console.log(formattedStr);
 
     const doubleFormattedStr = FormatCSSString(formattedStr);
