@@ -3,6 +3,11 @@ interface Window {
 }
 
 interface CreateElementOptions<T extends HTMLElement = HTMLElement> {
-  parent?: Node;
+  parentList?: NodeList;
+  
+} 
+
+interface DOMJSElement<Element extends HTMLElement = HTMLElement> {
+  readonly element: Element;
   
 }
