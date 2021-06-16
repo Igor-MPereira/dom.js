@@ -33,25 +33,3 @@ export default class Logger {
 
   public readonly logger_id: string;
 }
-
-export type __INTERNAL_LOGGER_INPUT = {
-  data: ArgsArray,
-  type: LoggerType,
-  forceLog?: boolean;
-  overrideLevel?: number
-};
-
-/**
- * library Internal Loger
- */
-export class InternalLogger extends Logger {
-  constructor(level?: LoggerLevel);
-
-  public __INTERNAL_LOGGER(input: __INTERNAL_LOGGER_INPUT): void;
-}
-
-/**
- * Use This Function To Change The Logging Level Of The Library Internal Logger
- * @param level The Logging Level Of The Library Internal Logger
- */
-export function setLevel(level: LoggerLevel): void;
