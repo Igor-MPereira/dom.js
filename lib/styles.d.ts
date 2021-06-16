@@ -1,13 +1,13 @@
-export type StyleRule  = CSSStyleDeclaration | { [key: string]: StyleRule };
+export type StyleRule = CSSStyleDeclaration | { [key: string]: StyleRule; };
 export type StyleRules = { [ruleKey: string]: StyleRule; };
 export type HandledStyleRuleResult = {
   styleRuleString: string,
   atRuleResultString: string,
-  appendResultString: string
+  appendResultString: string;
 };
 export type CSSFormatConfig = {
   tabSize?: number,
-  spacing?: number
+  spacing?: number;
 };
 
 
@@ -34,3 +34,4 @@ export function GetStyleString(...styles: StyleRules[]): string;
 export function ForceKebabCase(string: string, partial?: boolean): string;
 export function HandleStyleRule(styleRule: StyleRule, upperLevelKey: string): HandledStyleRuleResult;
 export function FormatCSSString(string: string, config?: CSSFormatConfig): string;
+export function setFormatting(useFormatting: boolean, config?: CSSFormatConfig): void;
