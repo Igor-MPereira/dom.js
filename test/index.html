@@ -11,48 +11,8 @@
 
 <body>
   <script type="module">
-    import { GetStyleString, FormatCSSString } from './index.js';
-    window.GetStyleString = GetStyleString;
-    window.FormatCSSString = FormatCSSString;
-    let styleString = GetStyleString({
-      ['.just-got-rekt']: {
-        display: 'none',
-        backgroundColor: 'red',
-        padding: 10,
-        border: {
-          topRadius: 10,
-          leftColor: 'green'
-        },
-        position: 'absolute',
-        ['&:hover']: {
-          backgroundColor: 'green',
-          ['&.wow']: {
-            color: 'blue',
-            ['&.yes']: 'display: flex;',
-            ['@media (max-width: 480px)']: {
-              width: '100%'
-            }
-          }
-        },
-        ['@media (min-width: 480px)']: {
-          fontSize: 10
-        }
-      }
-    }, {
-      ['.very-nice']: {
-        backgroundColor: 'blue'
-      }
-    })
-
-    console.log(styleString)
-    console.log('\n\n\n')
-
-    const formattedStr = FormatCSSString(styleString, { spacing: false, tabSize: 6} );
-    console.log(formattedStr);
-
-    const doubleFormattedStr = FormatCSSString(formattedStr);
-    console.log('\n\n\n')
-    console.log(doubleFormattedStr);
+    import { CreateElement } from './index.js';
+    CreateElement('head')
   </script>
 </body>
 

@@ -11,3 +11,5 @@ interface DOMJSElement<Element extends HTMLElement = HTMLElement> {
   readonly element: Element;
   
 }
+
+export function CreateElement(tagName: keyof HTMLElementTagNameMap, options: CreateElementOptions): void;
