@@ -6,7 +6,6 @@ export interface CreateElementOptions<T extends HTMLElement = HTMLElement> {
   parentList?: NodeList;
 
 }
-
 export interface DOMJSElement<Element extends HTMLElement = HTMLElement> extends DocumentAndElementEventHandlers, ElementContentEditable, GlobalEventHandlers, HTMLOrSVGElement {
   readonly element: Element;
 
