@@ -4,8 +4,10 @@ interface Window {
 
 export interface CreateElementOptions<T extends HTMLElement = HTMLElement> {
   parentList?: NodeList;
-
 }
+
+
+
 export interface DOMJSElement<Element extends HTMLElement = HTMLElement> extends DocumentAndElementEventHandlers, ElementContentEditable, GlobalEventHandlers, HTMLOrSVGElement {
   readonly element: Element;
 
@@ -23,4 +25,4 @@ export interface DOMJSElementConstructor {
 
 declare var DOMJSElement: DOMJSElementConstructor;
 
-export function CreateElement(tagName: keyof HTMLElementTagNameMap, options?: CreateElementOptions): void;
+export function CreateElement(tagName: keyof HTMLElementTagNameMap): void;

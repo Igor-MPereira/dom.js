@@ -18,3 +18,5 @@ export class InvalidConstructorError extends SyntaxError {
 export function ToBoolean(x: unknown): boolean;
 
 export function MakeDefaultObjectDescriptor(obj: unknown, options?: PropertyDescriptor | null, usePropAcessors?: boolean): PropertyDescriptorMap;
+
+export function isHTMLElement<El extends HTMLElement = HTMLElement>(x: unknown): x is El;
